@@ -14,7 +14,7 @@ docker build -t inference_server .
 docker run --rm -p 8080:8080 -v $(pwd)/models:/app/models inference_server
 ```
 
-Убедитесь, что `models/mnist.onnx` существует — модель в образ не встраивается, монтируется отдельно.
+Модель в образ не встраивается, монтируется отдельно.
 
 ## Пример запроса
 
