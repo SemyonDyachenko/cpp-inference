@@ -1,3 +1,10 @@
-thread_pool/build
+inference_server/build*
+inference_server/.ccache
 ML/venv
+ML/data
+*.onnx
+*.pth
 .vscode/
+.claude/
+.DS_Store
+.claude/

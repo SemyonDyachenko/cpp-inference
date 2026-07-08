@@ -1,0 +1,6 @@
+build*/
+.ccache/
+.git/
+.vscode/
+.cache/
+Testing/

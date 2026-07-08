@@ -1,0 +1,17 @@
+services:
+  inference_server-container:
+    image: ghcr.io/userver-framework/ubuntu-22.04-userver-pg:latest
+    platform: linux/amd64
+    privileged: true
+    network_mode: bridge
+    environment:
+      - PREFIX=${PREFIX:-~/.local}
+      - CCACHE_DIR=/inference_server/.ccache
+      - CORES_DIR=/cores
+    volumes:
+      - .:/inference_server:rw
+    ports:
+      - 8080:8080
+    working_dir: /inference_server
+    entrypoint:
+      - /bin/bash
